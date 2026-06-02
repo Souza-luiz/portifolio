@@ -2,6 +2,31 @@
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    background: var(--home-bg);
+    color: var(--home-text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.home.theme-dark {
+    --home-bg: #0f172a;
+    --home-panel: #111827;
+    --home-card: #1e293b;
+    --home-text: #f8fafc;
+    --home-muted: #cbd5e1;
+    --home-accent: #3b82f6;
+    --home-border: #334155;
+}
+
+.home.theme-light {
+    --home-bg: #f8fafc;
+    --home-panel: #ffffff;
+    --home-card: #e5eefb;
+    --home-text: #111827;
+    --home-muted: #334155;
+    --home-accent: #2563eb;
+    --home-border: #cbd5e1;
 }
 
 .hero {
@@ -12,9 +37,27 @@
     justify-content: center;
 }
 
+.theme-toggle {
+    margin: 20px 0 0 auto;
+    border: 1px solid var(--home-border);
+    background: var(--home-panel);
+    color: var(--home-text);
+    border-radius: 999px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background: var(--home-accent);
+    color: #fff;
+}
+
 .hero h1 {
     font-size: 4rem;
-    color: white;
+    color: var(--home-text);
+    white-space: nowrap;
 }
 
 .hero h2 {
@@ -24,8 +67,9 @@
 
 .hero p {
     max-width: 600px;
-    color: #cbd5e1;
+    color: var(--home-muted);
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .about,
@@ -36,36 +80,42 @@
 .about h2,
 .techs h2 {
     margin-bottom: 20px;
-    color: #3b82f6;
+    color: var(--home-accent);
 }
 
 .about p {
     line-height: 1.8;
-    color: #cbd5e1;
+    color: var(--home-muted);
 }
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 15px;
 
     max-width: 800px;
 
     padding: 20px;
 
-    background-color: #1e293b;
+    background-color: var(--home-panel);
+    border: 1px solid var(--home-border);
     border-radius: 15px;
 }
 
 .tech-grid span {
-    background: #cbd0da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--home-accent), #1d4ed8);
+    color: #fff;
     padding: 12px 20px;
     border-radius: 10px;
-
+    border: 1px solid transparent;
     transition: .3s;
 }
 
 .tech-grid span:hover {
     transform: translateY(-5px);
-    background: #3b82f6;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
 }

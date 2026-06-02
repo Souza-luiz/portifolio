@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <div className='footer'>
-            <h1>Meu Mundo</h1>
+            <h1>Entre código e criatividade, nascem soluções.</h1>
         </div>
     )
 }
